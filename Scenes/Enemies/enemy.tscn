@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ck3f6ser8k0ko"]
+
+[ext_resource type="Script" path="res://Scripts/Enemies/Enemy.cs" id="1_pd4oy"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_5ku3v"]
+radius = 1.0
+height = 3.0
+
+[node name="Enemy" type="PathFollow3D"]
+transform = Transform3D(0.999997, 0, 0, 0, 1, 0, 0, 0, 0.999997, 0, 0, 0)
+loop = false
+script = ExtResource("1_pd4oy")
+
+[node name="MeshInstance" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5, 0)
+mesh = SubResource("CapsuleMesh_5ku3v")
